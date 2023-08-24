@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script");
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+img, picture, video, svg, canvas{
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+.container{
+  margin: auto;
+  max-width: 600px;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  padding: 0.5rem var(--pad);
+  justify-content: space-between;
+}
+
+header h1{
+  gap: 0.5rem;
+  display: flex;
+  font-weight: 900;
+  font-size: 2.1rem;
+  align-items: flex-end;
+  font-family: "Dancing Script";
+}
+
+header h1 span{
+  font-size: 0.95rem;
+}
+
+header div{
+  gap: 1.1rem;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.message{
+  position: relative;
+}
+
+.message::after{
+  top: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  content: "5";
+  color: white;
+  display: flex;
+  font-weight: bold;
+  font-size: 0.75rem;
+  position: absolute;
+  border-radius: 50%;
+  align-items: center;
+  background-color: red;
+  justify-content: center;
+}
+
+.story{
+  gap: 0.25rem;
+  display: grid;
+  width: fit-content;
+}
+
+.story div{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: black;
+  border: 2.5px solid var(--grad1);
+}
+
+.story p{
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.myStory{
+  gap: 0.35rem;
+  display: grid;
+  padding-left: var(--pad);
+}
+
+.myStory div{
+  width: 4.5rem;
+  height: 4.5rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.myStory div::after{
+  right: 0;
+  bottom: 0;
+  content: "+";
+  color: white;
+  width: 1.1rem;
+  display: flex;
+  height: 1.1rem;
+  position: absolute;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  background-color: var(--blue);
+}
+
+.myStory p{
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.stories-ctn{
+  gap: 1rem;
+  display: flex;
+  overflow-x: auto;
+  position: relative;
+  margin-bottom: 1rem;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.stories{
+  gap: 0.75rem;
+  display: flex;
+}
+
+.posts{
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.post{
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-heading{
+  display: flex;
+  padding-inline: var(--pad);
+  justify-content: space-between;
+}
+
+.post-heading div{
+  gap: 0.45rem;
+  display: flex;
+  align-items: center;
+}
+
+.post-heading div span:nth-child(1){
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.post-heading div span:nth-child(2){
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.post-heading div + button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+
+.post-content{
+  width: 100%;
+  height: 300px;
+  background-color: black;
+}
+
+.post-interaction{
+  display: flex;
+  font-size: 1.5rem;
+  padding-inline: var(--pad);
+  justify-content: space-between;
+}
+
+.post-interaction div{
+  gap: 1rem;
+  display: flex;
+}
+
+.liked i{
+  color: var(--like);
+}
+
+.post-details{
+  gap: 0.35rem;
+  display: flex;
+  font-size: 0.9rem;
+  flex-direction: column;
+  padding-inline: var(--pad);
+}
+
+.post-details .commentCount{
+  color: var(--gray);
+}
+
+.post-details .desc span{
+  font-weight: 500;
+}
+
+.post-details h4{
+  color: var(--gray);
+}
+
+:root{
+  --pad: 0.5rem;
+  --gray: hsl(0, 0%, 47.45%);
+  --like: hsl(355.36 100% 59.41%);
+  --grad1: hsl(329.38 100% 28.43%);
+  --blue: hsl(203.66, 100%, 48.24%);
+}
